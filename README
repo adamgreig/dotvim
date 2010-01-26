@@ -1,0 +1,12 @@
+This is my .vim folder and includes my .vimrc.
+
+I have ~/.vimrc as a symlink to ~/.vim/vimrc so that I can keep
+both in version control.
+
+All files licensed as per details in the files themselves.
+
+Notably, this setup has 8 spaces for hard tabs, 4 for the default soft tabs
+and uses 2 for ruby files. Makefiles are set to use hard tabs.
+The default theme is zenburn. There are some awesome plugins.
+
+Adam Greig
