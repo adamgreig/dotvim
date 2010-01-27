@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/adam/Code/cusf/cusf-landing-prediction/test'
-let g:netrw_dirhist_2='/home/adam/.vim/plugin'
-let g:netrw_dirhist_3='/home/adam/Code/AVR/minimoc/.git'
-let g:netrw_dirhist_4='/home/adam/Backups/before_2010/Code_old/avr/LED_Firefly'
