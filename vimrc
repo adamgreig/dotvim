@@ -1,3 +1,7 @@
+filetype off
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
+
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
@@ -22,8 +26,6 @@ set ruler
 syntax on
 let g:zenburn_high_Contrast=1
 colors zenburn
-
-filetype plugin indent on
 
 au FileType make setlocal noexpandtab
 au FileType ruby setlocal softtabstop=2 shiftwidth=2
