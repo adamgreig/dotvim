@@ -9,4 +9,7 @@ Notably, this setup has 8 spaces for hard tabs, 4 for the default soft tabs
 and uses 2 for ruby files. Makefiles are set to use hard tabs.
 The default theme is zenburn. There are some awesome plugins.
 
+You should run `git submodule init` and `git submodule update` after cloning to
+pull in submodule plugins.
+
 Adam Greig
