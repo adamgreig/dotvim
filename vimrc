@@ -23,6 +23,8 @@ set ignorecase
 set showcmd
 set ruler
 
+set textwidth=79
+
 syntax on
 let g:zenburn_high_Contrast=1
 colors zenburn
