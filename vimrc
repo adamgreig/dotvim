@@ -13,13 +13,14 @@ set background=dark
 set nocompatible
 set mouse=a
 set term=xterm-256color
+set title
+set visualbell
 
 set hlsearch
 set incsearch
 set showmatch
 set smartcase
 set ignorecase
-
 set showcmd
 set ruler
 
@@ -39,10 +40,20 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+highlight Pmenu ctermbg=238 gui=bold
 
 "inoremap <Left>  <NOP>
 "inoremap <Right> <NOP>
 "inoremap <Up>    <NOP>
 "inoremap <Down>  <NOP>
+
+nnoremap ' `
+nnoremap ` '
+
+runtime macros/matchit.vim
 
 au BufNewFile,BufRead *.less set filetype=less
