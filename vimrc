@@ -10,9 +10,11 @@ set smarttab
 set autoindent
 
 set background=dark
-set nocompatible
 set mouse=a
 set term=xterm-256color
+set modelines=0
+set encoding=utf-8
+set nocompatible
 set title
 set visualbell
 
@@ -25,6 +27,8 @@ set showcmd
 set ruler
 
 set textwidth=79
+
+set directory=~/.vim/tmp
 
 syntax on
 let g:zenburn_high_Contrast=1
@@ -45,11 +49,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 highlight Pmenu ctermbg=238 gui=bold
-
-"inoremap <Left>  <NOP>
-"inoremap <Right> <NOP>
-"inoremap <Up>    <NOP>
-"inoremap <Down>  <NOP>
 
 nnoremap ' `
 nnoremap ` '
