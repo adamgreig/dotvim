@@ -17,6 +17,7 @@ set encoding=utf-8
 set nocompatible
 set title
 set visualbell
+set nofoldenable
 
 set hlsearch
 set incsearch
