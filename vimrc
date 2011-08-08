@@ -59,6 +59,7 @@ nnoremap ' `
 nnoremap ` '
 
 nmap <silent> <leader>n :noh<CR>
+nnoremap <F5> :GundoToggle<CR>
 
 runtime macros/matchit.vim
 
