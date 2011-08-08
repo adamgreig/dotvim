@@ -33,6 +33,8 @@ set textwidth=79
 
 set directory=~/.vim/tmp
 
+set laststatus=2
+
 syntax enable
 set background=dark
 colorscheme solarized
