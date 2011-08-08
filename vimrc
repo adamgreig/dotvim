@@ -1,6 +1,5 @@
-filetype off
-call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
+call pathogen#runtime_append_all_bundles()
 
 set tabstop=8
 set softtabstop=4
@@ -9,7 +8,7 @@ set expandtab
 set smarttab
 set autoindent
 
-set background=dark
+set backspace=indent,eol,start
 set mouse=a
 set term=xterm-256color
 set modelines=0
@@ -18,6 +17,7 @@ set nocompatible
 set title
 set visualbell
 set nofoldenable
+set wildmenu
 
 set hlsearch
 set incsearch
@@ -27,13 +27,15 @@ set ignorecase
 set showcmd
 set ruler
 
+let mapleader = ","
+
 set textwidth=79
 
 set directory=~/.vim/tmp
 
-syntax on
-let g:zenburn_high_Contrast=1
-colors zenburn
+syntax enable
+set background=dark
+colorscheme solarized
 
 au FileType make setlocal noexpandtab
 au FileType ruby setlocal softtabstop=2 shiftwidth=2
@@ -53,6 +55,8 @@ highlight Pmenu ctermbg=238 gui=bold
 
 nnoremap ' `
 nnoremap ` '
+
+nmap <silent> <leader>n :noh<CR>
 
 runtime macros/matchit.vim
 
