@@ -66,3 +66,4 @@ nnoremap <F5> :GundoToggle<CR>
 runtime macros/matchit.vim
 
 au BufNewFile,BufRead *.less set filetype=less
+au BufNewFile,BufRead Vagrantfile set filetype=ruby
