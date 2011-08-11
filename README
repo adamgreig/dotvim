@@ -1,15 +1,8 @@
-This is my .vim folder and includes my .vimrc.
+My vim files.
 
-I have ~/.vimrc as a symlink to ~/.vim/vimrc so that I can keep
-both in version control.
-
-All files licensed as per details in the files themselves.
-
-Notably, this setup has 8 spaces for hard tabs, 4 for the default soft tabs
-and uses 2 for ruby files. Makefiles are set to use hard tabs.
-The default theme is zenburn. There are some awesome plugins.
-
-You should run `git submodule init` and `git submodule update` after cloning to
-pull in submodule plugins.
-
-Adam Greig
+Setup:
+    
+    $ ln -s vimrc ~/.vimrc
+    $ git submodule update --init
+    $ cd bundle/pyflakes-vim
+    $ git submodule update --init
