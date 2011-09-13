@@ -27,6 +27,7 @@ set directory=~/.vim/tmp
 set encoding=utf-8
 set termencoding=utf-8
 set laststatus=2
+set colorcolumn=80
 set wildmenu
 set wildignore=*.pyc
 set title
