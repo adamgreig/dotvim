@@ -37,6 +37,9 @@ set visualbell
 set nofoldenable
 set ruler
 
+" Powerline appearance
+let Powerline_symbols = "unicode"
+
 " searching
 set hlsearch
 set incsearch
