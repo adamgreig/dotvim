@@ -68,6 +68,10 @@ nnoremap <F5> :GundoToggle<CR>
 map <F2> :NERDTreeToggle<CR>
 map <F3> :call FindInNERDTree()<CR>
 
+" Unmap nerdcommenter's comment-invert, map instead change-inside-surroundings
+autocmd VimEnter * nunmap <Leader>ci
+autocmd VimEnter * nmap <script> <silent> <unique> <Leader>ci :ChangeInsideSurrounding<CR>
+
 " filetype specific settings
 autocmd FileType make setlocal noexpandtab
 autocmd FileType ruby setlocal softtabstop=2 shiftwidth=2
