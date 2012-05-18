@@ -61,3 +61,6 @@
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "bundle/ebnf.vim"]
+	path = bundle/ebnf.vim
+	url = https://github.com/vim-scripts/ebnf.vim.git

@@ -87,6 +87,7 @@ autocmd BufNewFile,BufRead *.less set filetype=less
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.json set tw=0
+autocmd BufNewFile,BufRead *.ebnf set filetype=ebnf
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
