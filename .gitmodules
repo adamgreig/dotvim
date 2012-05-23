@@ -64,3 +64,6 @@
 [submodule "bundle/ebnf.vim"]
 	path = bundle/ebnf.vim
 	url = https://github.com/vim-scripts/ebnf.vim.git
+[submodule "bundle/swap-parameters"]
+	path = bundle/swap-parameters
+	url = https://github.com/vim-scripts/swap-parameters.git
