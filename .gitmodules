@@ -49,9 +49,6 @@
 [submodule "bundle/vim-pastie"]
 	path = bundle/vim-pastie
 	url = https://github.com/tpope/vim-pastie
-[submodule "bundle/vim-powerline"]
-	path = bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/change-inside-surroundings"]
 	path = bundle/change-inside-surroundings
 	url = git://github.com/briandoll/change-inside-surroundings.vim.git
