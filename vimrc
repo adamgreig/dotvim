@@ -31,7 +31,6 @@ set directory=~/.vim/tmp
 " appearance
 set encoding=utf-8
 set termencoding=utf-8
-set laststatus=2
 set colorcolumn=80
 set wildmenu
 set wildignore=*.pyc
@@ -104,5 +103,6 @@ runtime macros/matchit.vim
 " powerline
 if filereadable("/home/adam/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
     set rtp+=/home/adam/.local/lib/python2.7/site-packages/powerline/bindings/vim
+    set laststatus=2
+    set noshowmode
 endif
-set rtp+=
