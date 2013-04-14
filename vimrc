@@ -42,9 +42,6 @@ set visualbell
 set nofoldenable
 set ruler
 
-" Powerline appearance
-let Powerline_symbols = "unicode"
-
 " searching
 set hlsearch
 set incsearch
@@ -103,3 +100,9 @@ highlight Pmenu ctermbg=238 gui=bold
 
 " matchit
 runtime macros/matchit.vim
+
+" powerline
+if filereadable("/home/adam/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
+    set rtp+=/home/adam/.local/lib/python2.7/site-packages/powerline/bindings/vim
+endif
+set rtp+=
