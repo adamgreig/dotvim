@@ -104,7 +104,6 @@ runtime macros/matchit.vim
 if filereadable("/home/adam/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
     set rtp+=/home/adam/.local/lib/python2.7/site-packages/powerline/bindings/vim
     set laststatus=2
-    set noshowmode
     if ! has('gui_running')
         set ttimeoutlen=10
         augroup FastEscape
