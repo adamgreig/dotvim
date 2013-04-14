@@ -105,4 +105,12 @@ if filereadable("/home/adam/.local/lib/python2.7/site-packages/powerline/binding
     set rtp+=/home/adam/.local/lib/python2.7/site-packages/powerline/bindings/vim
     set laststatus=2
     set noshowmode
+    if ! has('gui_running')
+        set ttimeoutlen=10
+        augroup FastEscape
+            autocmd!
+            au InsertEnter * set timeoutlen=0
+            au InsertLeave * set timeoutlen=1000
+        augroup END
+    endif
 endif
