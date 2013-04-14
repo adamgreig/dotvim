@@ -101,15 +101,13 @@ highlight Pmenu ctermbg=238 gui=bold
 runtime macros/matchit.vim
 
 " powerline
-if filereadable("/home/adam/.local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim")
-    set rtp+=/home/adam/.local/lib/python2.7/site-packages/powerline/bindings/vim
-    set laststatus=2
-    if ! has('gui_running')
-        set ttimeoutlen=10
-        augroup FastEscape
-            autocmd!
-            au InsertEnter * set timeoutlen=0
-            au InsertLeave * set timeoutlen=1000
-        augroup END
-    endif
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set laststatus=2
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
 endif
