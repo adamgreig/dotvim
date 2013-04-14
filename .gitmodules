@@ -67,6 +67,3 @@
 [submodule "bundle/vim-gnupg"]
 	path = bundle/vim-gnupg
 	url = https://github.com/jamessan/vim-gnupg.git
-[submodule "bundle/vim-opencl"]
-	path = bundle/vim-opencl
-	url = https://github.com/whois/vim-opencl.git
