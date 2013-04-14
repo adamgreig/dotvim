@@ -67,3 +67,9 @@
 [submodule "bundle/swap-parameters"]
 	path = bundle/swap-parameters
 	url = https://github.com/vim-scripts/swap-parameters.git
+[submodule "bundle/vim-gnupg"]
+	path = bundle/vim-gnupg
+	url = https://github.com/jamessan/vim-gnupg.git
+[submodule "bundle/vim-opencl"]
+	path = bundle/vim-opencl
+	url = https://github.com/whois/vim-opencl.git

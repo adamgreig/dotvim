@@ -80,6 +80,7 @@ autocmd VimEnter * nmap <script> <silent> <unique> <Leader>ci :ChangeInsideSurro
 " filetype specific settings
 autocmd FileType make setlocal noexpandtab
 autocmd FileType ruby setlocal softtabstop=2 shiftwidth=2
+autocmd FileType html setlocal softtabstop=2 shiftwidth=2
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -93,6 +94,7 @@ autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.json set tw=0
 autocmd BufNewFile,BufRead *.ebnf set filetype=ebnf
+autocmd BufNewFile,BufRead *.cl set filetype=c
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
