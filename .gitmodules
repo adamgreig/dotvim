@@ -40,15 +40,9 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/vim-conque"]
-	path = bundle/vim-conque
-	url = https://github.com/rson/vim-conque.git
 [submodule "bundle/VimClojure"]
 	path = bundle/VimClojure
 	url = https://github.com/vim-scripts/VimClojure.git
-[submodule "bundle/vim-pastie"]
-	path = bundle/vim-pastie
-	url = https://github.com/tpope/vim-pastie
 [submodule "bundle/change-inside-surroundings"]
 	path = bundle/change-inside-surroundings
 	url = git://github.com/briandoll/change-inside-surroundings.vim.git
