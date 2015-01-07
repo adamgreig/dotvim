@@ -59,6 +59,8 @@ map <silent> <leader><space> ;noh<CR>
 nnoremap <leader>v V`]
 nmap <silent> <leader>d "_d
 vmap <silent> <leader>d "_d
+nmap <silent> <leader>o ;set paste<CR>
+nmap <silent> <leader>O ;set nopaste<CR>
 nnoremap ' `
 nnoremap ` '
 noremap ; :
@@ -91,6 +93,11 @@ autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.json set tw=0
 autocmd BufNewFile,BufRead *.ebnf set filetype=ebnf
 autocmd BufNewFile,BufRead *.cl set filetype=c
+autocmd BufNewFile,BufRead *.sls set filetype=yaml
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=pandoc
+augroup end
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
