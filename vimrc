@@ -104,6 +104,9 @@ let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 highlight Pmenu ctermbg=238 gui=bold
 
+let g:syntastic_python_prospector_args = "--strictness high"
+let g:syntastic_python_checkers = ['prospector']
+
 " matchit
 runtime macros/matchit.vim
 
