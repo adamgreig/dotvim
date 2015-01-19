@@ -101,8 +101,19 @@ set completeopt=menuone,longest,preview
 highlight Pmenu ctermbg=238 gui=bold
 
 " syntastic
-let g:syntastic_python_prospector_args = "--strictness high --without-tool pylint"
-let g:syntastic_python_checkers = ['prospector']
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args = "--max-complexity 11"
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_enable_highlighting = 1
+let g:syntastic_enable_signs = 1
+
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_style_error_symbol = "😞"
+let g:syntastic_style_warning_symbol = "😕"
 
 " pandoc
 let g:pandoc_use_hard_wraps = 1
