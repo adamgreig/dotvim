@@ -1,3 +1,7 @@
+" .vimrc
+" Adam Greig
+" https://github.com/adamgreig/dotvim
+
 " vim is not vi
 set nocompatible
 
@@ -6,10 +10,38 @@ if $SHELL =~ "fish"
     set shell=/bin/sh
 endif
 
-" load plugins
+" load plugins via vundle
 filetype off
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Utilities
+Plugin 'gmarik/Vundle.vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'wincent/Command-T'
+Plugin 'sjl/gundo.vim'
+Plugin 'briandoll/change-inside-surroundings.vim'
+Plugin 'ervandew/supertab'
+Plugin 'vim-scripts/swap-parameters'
+Plugin 'scrooloose/syntastic'
+Plugin 'altercation/vim-colors-solarized'
+
+" Language/Syntax Support
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'groenewege/vim-less'
+Plugin 'vim-scripts/opencl.vim'
+Plugin 'petRUShka/vim-pyopencl'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'wting/rust.vim'
+Plugin 'stephpy/vim-yaml'
+
+" To consider:
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'jamessan/vim-gnupg'
+call vundle#end()
 filetype plugin indent on
 
 " tabs and indentation
@@ -56,24 +88,29 @@ colorscheme solarized
 " key bindings
 let mapleader = ","
 map <silent> <leader><space> ;noh<CR>
+" Highlight (line) to end of recently changed/yanked text
 nnoremap <leader>v V`]
+" Delete to _ register instead of default
 nmap <silent> <leader>d "_d
 vmap <silent> <leader>d "_d
+" Easier enter/leave paste mode
 nmap <silent> <leader>o ;set paste<CR>
 nmap <silent> <leader>O ;set nopaste<CR>
+" Go to matching position with ', just line with `
 nnoremap ' `
 nnoremap ` '
+" Use semicolon instead of colon to save shift key/fingers
 noremap ; :
 noremap : ;
 
 " plugin key bindings
 nnoremap <F5> :GundoToggle<CR>
-map <F2> :NERDTreeToggle<CR>
-map <F3> :call FindInNERDTree()<CR>
+"map <F2> :NERDTreeToggle<CR>
+"map <F3> :call FindInNERDTree()<CR>
 
 " Unmap nerdcommenter's comment-invert, map instead change-inside-surroundings
-autocmd VimEnter * nunmap <Leader>ci
-autocmd VimEnter * nmap <script> <silent> <unique> <Leader>ci :ChangeInsideSurrounding<CR>
+nnoremap <leader>Ci <Plug>NERDCommenterInvert
+nmap <script> <silent> <unique> <Leader>ci :ChangeInsideSurrounding<CR>
 
 " filetype specific settings
 autocmd FileType make setlocal noexpandtab
@@ -88,7 +125,7 @@ autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.json set tw=0
 autocmd BufNewFile,BufRead *.ebnf set filetype=ebnf
-autocmd BufNewFile,BufRead *.cl set filetype=c
+autocmd BufNewFile,BufRead *.cl set filetype=opencl
 autocmd BufNewFile,BufRead *.sls set filetype=yaml
 augroup markdown
     au!
@@ -118,12 +155,9 @@ let g:syntastic_style_warning_symbol = "😕"
 " pandoc
 let g:pandoc_use_hard_wraps = 1
 
-" matchit
-runtime macros/matchit.vim
-
-" powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" always show a powerline
 set laststatus=2
+" disable the amazingly annoying delay reverting to command mode
 if ! has('gui_running')
     set ttimeoutlen=10
     augroup FastEscape

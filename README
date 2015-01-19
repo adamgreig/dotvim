@@ -1,8 +1,10 @@
 My vim files.
 
-Setup:
+Managed by Vundle, so install that on a new checkout:
+
+    $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    $ vim +PluginInstall +qall
+
+Finally move vimrc into place:
     
     $ ln -s vimrc ~/.vimrc
-    $ git submodule update --init
-    $ cd bundle/pyflakes-vim
-    $ git submodule update --init
