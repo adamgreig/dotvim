@@ -156,6 +156,7 @@ let g:syntastic_style_warning_symbol = "😕"
 
 " pandoc
 let g:pandoc_use_hard_wraps = 1
+let g:pandoc#formatting#mode = 'ha'
 
 " always show a powerline
 set laststatus=2
