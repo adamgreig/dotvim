@@ -84,6 +84,9 @@ set ignorecase
 syntax enable
 set background=dark
 colorscheme solarized
+highlight SignColumn ctermfg=12 ctermbg=0 guifg=Cyan guibg=Grey
+highlight Error term=bold cterm=bold ctermfg=1 ctermbg=0 guifg=White guibg=Red
+highlight Todo term=bold cterm=bold ctermfg=5 ctermbg=0 guifg=Blue guibg=Yellow
 
 " key bindings
 let mapleader = ","
