@@ -161,6 +161,9 @@ let g:syntastic_style_warning_symbol = "😕"
 let g:pandoc_use_hard_wraps = 1
 let g:pandoc#formatting#mode = 'ha'
 
+" don't use rust.vim's default 99-char lines
+let g:rust_recommended_style = 0
+
 " always show a powerline
 set laststatus=2
 " disable the amazingly annoying delay reverting to command mode
