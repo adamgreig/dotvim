@@ -26,6 +26,7 @@ Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/swap-parameters'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'terryma/vim-expand-region'
 
 " Language/Syntax Support
 Plugin 'kchmck/vim-coffee-script'
@@ -89,7 +90,7 @@ highlight Error term=bold cterm=bold ctermfg=1 ctermbg=0 guifg=White guibg=Red
 highlight Todo term=bold cterm=bold ctermfg=5 ctermbg=0 guifg=Blue guibg=Yellow
 
 " key bindings
-let mapleader = ","
+let mapleader = "\<Space>"
 map <silent> <leader><space> ;noh<CR>
 " Highlight (line) to end of recently changed/yanked text
 nnoremap <leader>v V`]
@@ -99,17 +100,27 @@ vmap <silent> <leader>d "_d
 " Easier enter/leave paste mode
 nmap <silent> <leader>o ;set paste<CR>
 nmap <silent> <leader>O ;set nopaste<CR>
+" Jump to end of anything pasted with 'p'
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+" Quicker writes
+nnoremap <leader>w ;w<CR>
 " Go to matching position with ', just line with `
 nnoremap ' `
 nnoremap ` '
 " Use semicolon instead of colon to save shift key/fingers
 noremap ; :
 noremap : ;
+" Don't show the stupid recent-commands window
+map q; ;q
 
 " plugin key bindings
 nnoremap <F5> :GundoToggle<CR>
 "map <F2> :NERDTreeToggle<CR>
 "map <F3> :call FindInNERDTree()<CR>
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " Unmap nerdcommenter's comment-invert, map instead change-inside-surroundings
 nnoremap <leader>Ci <Plug>NERDCommenterInvert
