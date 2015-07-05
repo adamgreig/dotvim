@@ -37,6 +37,7 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'wting/rust.vim'
 Plugin 'stephpy/vim-yaml'
+Plugin 'sirtaj/vim-openscad'
 
 " To consider:
 "Plugin 'scrooloose/nerdtree'
