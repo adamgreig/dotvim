@@ -10,6 +10,14 @@ if $SHELL =~ "fish"
     set shell=/bin/sh
 endif
 
+" use a thin cursor on gnome-terminal
+" experimental, will only work when editing locally
+if has("autocmd")
+  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+endif
+
 " load plugins via vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -61,6 +69,13 @@ set term=xterm-256color
 set modelines=0
 set textwidth=79
 set directory=~/.vim/tmp
+set lazyredraw
+
+" folding
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=indent
 
 " appearance
 set encoding=utf-8
@@ -74,6 +89,7 @@ set showmode
 set visualbell
 set nofoldenable
 set ruler
+set cursorline
 
 " searching
 set hlsearch
@@ -113,7 +129,7 @@ nnoremap ` '
 " Use semicolon instead of colon to save shift key/fingers
 noremap ; :
 noremap : ;
-" Don't show the stupid recent-commands window
+" Don't show the stupid recent-commands window by accident
 map q; ;q
 
 " plugin key bindings
