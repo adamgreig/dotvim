@@ -35,7 +35,7 @@ Plugin 'vim-scripts/opencl.vim'
 Plugin 'petRUShka/vim-pyopencl'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'wting/rust.vim'
+Plugin 'rust-lang/rust.vim'
 Plugin 'stephpy/vim-yaml'
 Plugin 'sirtaj/vim-openscad'
 
@@ -91,7 +91,7 @@ highlight Error term=bold cterm=bold ctermfg=1 ctermbg=0 guifg=White guibg=Red
 highlight Todo term=bold cterm=bold ctermfg=5 ctermbg=0 guifg=Blue guibg=Yellow
 
 " key bindings
-let mapleader = "\<Space>"
+let mapleader=" "
 map <silent> <leader><space> ;noh<CR>
 " Highlight (line) to end of recently changed/yanked text
 nnoremap <leader>v V`]
@@ -106,7 +106,7 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 " Quicker writes
-nnoremap <leader>w ;w<CR>
+nnoremap <leader>w :w<CR>
 " Go to matching position with ', just line with `
 nnoremap ' `
 nnoremap ` '
