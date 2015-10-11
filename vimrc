@@ -46,6 +46,7 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'rust-lang/rust.vim'
 Plugin 'stephpy/vim-yaml'
 Plugin 'sirtaj/vim-openscad'
+Plugin 'fatih/vim-go'
 
 " To consider:
 "Plugin 'scrooloose/nerdtree'
@@ -190,6 +191,9 @@ let g:pandoc#formatting#mode = 'ha'
 
 " don't use rust.vim's default 99-char lines
 let g:rust_recommended_style = 0
+
+" vim-go
+let g:go_fmt_autosave = 1
 
 " always show a powerline
 set laststatus=2
