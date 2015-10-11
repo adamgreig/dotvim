@@ -87,7 +87,6 @@ set title
 set showcmd
 set showmode
 set visualbell
-set nofoldenable
 set ruler
 set cursorline
 
