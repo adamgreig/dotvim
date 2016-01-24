@@ -71,6 +71,8 @@ set modelines=0
 set textwidth=79
 set directory=~/.vim/tmp
 set lazyredraw
+set spell
+set spelllang=en_gb
 
 " folding
 set foldenable
@@ -90,6 +92,8 @@ set showmode
 set visualbell
 set ruler
 set cursorline
+set listchars=tab:›\ ,trail:·
+set list
 
 " searching
 set hlsearch
@@ -184,6 +188,9 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_style_error_symbol = "😞"
 let g:syntastic_style_warning_symbol = "😕"
+
+" use latex for plain .tex files
+let g:tex_flavor='latex'
 
 " pandoc
 let g:pandoc_use_hard_wraps = 1
