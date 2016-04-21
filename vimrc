@@ -47,6 +47,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'stephpy/vim-yaml'
 Plugin 'sirtaj/vim-openscad'
 Plugin 'fatih/vim-go'
+Plugin 'racer-rust/vim-racer'
 
 " To consider:
 "Plugin 'scrooloose/nerdtree'
@@ -198,6 +199,12 @@ let g:pandoc#formatting#mode = 'ha'
 
 " don't use rust.vim's default 99-char lines
 let g:rust_recommended_style = 0
+
+" vim-racer
+set hidden
+let g:racer_cmd = "/home/adam/.cargo/bin/racer"
+let $RUST_SRC_PATH="/home/adam/.cargo/src/rustc-1.8.0/src/"
+let $CARGO_HOME="/home/adam/.cargo/"
 
 " vim-go
 let g:go_fmt_autosave = 1
