@@ -35,6 +35,7 @@ Plugin 'vim-scripts/swap-parameters'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'terryma/vim-expand-region'
+Plugin 'triglav/vim-visual-increment'
 
 " Language/Syntax Support
 Plugin 'kchmck/vim-coffee-script'
@@ -128,6 +129,8 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 " Quicker writes
 nnoremap <leader>w :w<CR>
+" Quicker quits
+nnoremap <leader>q :q<CR>
 " Go to matching position with ', just line with `
 nnoremap ' `
 nnoremap ` '
@@ -156,6 +159,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType rust setlocal colorcolumn=100 textwidth=99
 autocmd BufNewFile,BufRead *.less set filetype=less
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead *.json set filetype=javascript
@@ -163,6 +167,7 @@ autocmd BufNewFile,BufRead *.json set tw=0
 autocmd BufNewFile,BufRead *.ebnf set filetype=ebnf
 autocmd BufNewFile,BufRead *.cl set filetype=opencl
 autocmd BufNewFile,BufRead *.sls set filetype=yaml
+autocmd BufNewFile,BufRead *.tex set tw=0
 augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=pandoc
@@ -196,9 +201,6 @@ let g:tex_flavor='latex'
 " pandoc
 let g:pandoc_use_hard_wraps = 1
 let g:pandoc#formatting#mode = 'ha'
-
-" don't use rust.vim's default 99-char lines
-let g:rust_recommended_style = 0
 
 " vim-racer
 set hidden
