@@ -172,6 +172,7 @@ augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=pandoc
 augroup end
+hi link rustCommentLineDoc Comment
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
@@ -183,6 +184,7 @@ let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args = "--max-complexity 11"
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_python_pylint_args = "-j8 -E"
+let g:syntastic_rust_checkers = []
 
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
@@ -205,8 +207,8 @@ let g:pandoc#formatting#mode = 'ha'
 " vim-racer
 set hidden
 let g:racer_cmd = "/home/adam/.cargo/bin/racer"
-let $RUST_SRC_PATH="/home/adam/.cargo/src/rustc-1.8.0/src/"
-let $CARGO_HOME="/home/adam/.cargo/"
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
 
 " vim-go
 let g:go_fmt_autosave = 1
