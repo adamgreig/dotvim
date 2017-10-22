@@ -36,6 +36,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'terryma/vim-expand-region'
 Plugin 'triglav/vim-visual-increment'
+Plugin 'junegunn/vim-easy-align'
 
 " Language/Syntax Support
 Plugin 'kchmck/vim-coffee-script'
@@ -172,7 +173,9 @@ augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=pandoc
 augroup end
-hi link rustCommentLineDoc Comment
+hi link rustCommentLineDoc PreProc
+autocmd FileType rust syn keyword rustUnsafeKeyword unsafe
+autocmd FileType rust hi link rustUnsafeKeyword Special
 
 " supertab
 let g:SuperTabDefaultCompletionType = "context"
@@ -209,6 +212,10 @@ set hidden
 let g:racer_cmd = "/home/adam/.cargo/bin/racer"
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
+
+" vim-easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " vim-go
 let g:go_fmt_autosave = 1
