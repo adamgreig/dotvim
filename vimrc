@@ -27,16 +27,18 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'wincent/Command-T'
 Plugin 'sjl/gundo.vim'
 Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'ervandew/supertab'
-Plugin 'vim-scripts/swap-parameters'
-Plugin 'scrooloose/syntastic'
+"Plugin 'vim-scripts/swap-parameters'
+"Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'terryma/vim-expand-region'
 Plugin 'triglav/vim-visual-increment'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'junegunn/fzf.vim', {'rtp': '~/.fzf'}
+Plugin 'w0rp/ale'
+Plugin 'airblade/vim-gitgutter'
 
 " Language/Syntax Support
 Plugin 'kchmck/vim-coffee-script'
@@ -53,7 +55,6 @@ Plugin 'racer-rust/vim-racer'
 
 " To consider:
 "Plugin 'scrooloose/nerdtree'
-"Plugin 'tpope/vim-fugitive'
 "Plugin 'jamessan/vim-gnupg'
 call vundle#end()
 filetype plugin indent on
@@ -91,7 +92,7 @@ set wildmenu
 set wildignore=*.pyc
 set title
 set showcmd
-set showmode
+set noshowmode
 set visualbell
 set ruler
 set cursorline
@@ -147,6 +148,10 @@ nnoremap <F5> :GundoToggle<CR>
 "map <F3> :call FindInNERDTree()<CR>
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+" fzf
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>e :Files<CR>
+nnoremap <leader>r :Tags<CR>
 
 " Unmap nerdcommenter's comment-invert, map instead change-inside-surroundings
 nnoremap <leader>Ci <Plug>NERDCommenterInvert
@@ -199,6 +204,13 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_style_error_symbol = "😞"
 let g:syntastic_style_warning_symbol = "😕"
+
+" ALE
+let g:ale_sign_error = "✗"
+let g:ale_sign_warning = "⚠"
+
+" gitgutter
+let g:gitgutter_realtime = 0
 
 " use latex for plain .tex files
 let g:tex_flavor='latex'
