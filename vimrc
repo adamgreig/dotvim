@@ -39,6 +39,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/fzf.vim', {'rtp': '~/.fzf'}
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'sjl/tslime.vim'
 
 " Language/Syntax Support
 Plugin 'kchmck/vim-coffee-script'
@@ -214,6 +215,12 @@ let g:gitgutter_realtime = 0
 
 " use latex for plain .tex files
 let g:tex_flavor='latex'
+
+" tslime
+let g:tslime_ensure_trailing_newlines = 1
+let g:tslime_normal_mapping = '<leader>t'
+let g:tslime_visual_mapping = '<leader>t'
+let g:tslime_vars_mapping = '<leader>T'
 
 " pandoc
 let g:pandoc_use_hard_wraps = 1
