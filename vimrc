@@ -10,14 +10,6 @@ if $SHELL =~ "fish"
     set shell=/bin/sh
 endif
 
-" use a thin cursor on gnome-terminal
-" experimental, will only work when editing locally
-if has("autocmd")
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-endif
-
 " load plugins via vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
