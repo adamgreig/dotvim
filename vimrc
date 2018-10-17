@@ -24,7 +24,8 @@ Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'ervandew/supertab'
 "Plugin 'vim-scripts/swap-parameters'
 "Plugin 'scrooloose/syntastic'
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
 Plugin 'terryma/vim-expand-region'
 Plugin 'triglav/vim-visual-increment'
 Plugin 'junegunn/vim-easy-align'
@@ -104,8 +105,12 @@ set ignorecase
 " colors
 syntax enable
 set background=dark
-colorscheme solarized
-highlight SignColumn ctermfg=12 ctermbg=0 guifg=Cyan guibg=Grey
+let g:gruvbox_sign_column="bg0"
+let g:gruvbox_contrast_dark="medium"
+let g:gruvbox_italic=1
+let g:gruvbox_italicize_comments=1
+let g:gruvbox_italicize_strings=1
+colorscheme gruvbox
 highlight Error term=bold cterm=bold ctermfg=1 ctermbg=0 guifg=White guibg=Red
 highlight Todo term=bold cterm=bold ctermfg=5 ctermbg=0 guifg=Blue guibg=Yellow
 
@@ -201,7 +206,7 @@ let g:syntastic_style_error_symbol = "😞"
 let g:syntastic_style_warning_symbol = "😕"
 
 " ALE
-let g:ale_sign_error = "🛑"
+let g:ale_sign_error = "✗"
 let g:ale_sign_warning = "⚠️"
 
 " gitgutter
@@ -219,6 +224,7 @@ let g:tslime_vars_mapping = '<leader>T'
 " pandoc
 let g:pandoc_use_hard_wraps = 1
 let g:pandoc#formatting#mode = 'ha'
+let g:vim_markdown_folding_disabled = 1
 
 " vim-racer
 set hidden
