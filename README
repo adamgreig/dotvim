@@ -2,7 +2,7 @@ My vim files.
 
 Managed by Vundle, so install that on a new checkout:
 
-    $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    $ git submodule update --init
     $ vim +PluginInstall +qall
 
 If your vim doesn't check `~/.vim/vimrc`, symlink it:
