@@ -66,6 +66,7 @@ set autoindent
 " behaviour
 set backspace=indent,eol,start
 set mouse=a
+set ttymouse=sgr
 set term=xterm-256color
 set modelines=0
 set textwidth=79
