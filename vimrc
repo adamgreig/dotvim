@@ -17,7 +17,9 @@ call vundle#begin()
 
 " Utilities
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'sjl/gundo.vim'
 Plugin 'briandoll/change-inside-surroundings.vim'
@@ -72,7 +74,7 @@ set modelines=0
 set textwidth=79
 set directory=~/.vim/tmp
 set lazyredraw
-set spell
+"set spell " (spelling off by default)
 set spelllang=en_gb
 
 " folding
@@ -107,13 +109,16 @@ set ignorecase
 syntax enable
 set background=dark
 let g:gruvbox_sign_column="bg0"
-let g:gruvbox_contrast_dark="medium"
+let g:gruvbox_vert_split="bg1"
+let g:gruvbox_contrast_dark="hard"
 let g:gruvbox_italic=1
 let g:gruvbox_italicize_comments=1
 let g:gruvbox_italicize_strings=1
 colorscheme gruvbox
-highlight Error term=bold cterm=bold ctermfg=1 ctermbg=0 guifg=White guibg=Red
-highlight Todo term=bold cterm=bold ctermfg=5 ctermbg=0 guifg=Blue guibg=Yellow
+highlight Error term=bold cterm=bold ctermfg=124 ctermbg=0 guifg=White guibg=Red
+highlight Todo term=bold cterm=bold ctermfg=132 ctermbg=0 guifg=Blue guibg=Yellow
+highlight SpellBad cterm=underline
+highlight CursorLine ctermbg=235
 
 " key bindings
 let mapleader=" "
@@ -187,6 +192,17 @@ autocmd FileType rust hi link rustUnsafeKeyword Special
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 highlight Pmenu ctermbg=238 gui=bold
+
+" airline
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+"let g:airline_detect_spell=1
+let g:airline_detect_spelllang=0
+"let g:airline_inactive_collapse=1
+let g:airline_theme="bubblegum"
 
 " syntastic
 let g:syntastic_python_checkers = ['flake8']
