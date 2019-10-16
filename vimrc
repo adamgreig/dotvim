@@ -32,7 +32,7 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'triglav/vim-visual-increment'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/fzf.vim', {'rtp': '~/.fzf'}
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'sjl/tslime.vim'
 
@@ -109,7 +109,8 @@ set ignorecase
 syntax enable
 set background=dark
 let g:gruvbox_sign_column="bg0"
-let g:gruvbox_vert_split="bg1"
+let g:gruvbox_vert_split="gray"
+let g:gruvbox_color_column="bg1"
 let g:gruvbox_contrast_dark="hard"
 let g:gruvbox_italic=1
 let g:gruvbox_italicize_comments=1
