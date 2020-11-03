@@ -208,6 +208,9 @@ let g:ale_sign_warning = "⚠️"
 "            \ 'rust': ['analyzer']
 "            \ }
 
+" Black
+let g:black_virtualenv = "~/.vim/tmp/black"
+
 " gitgutter
 let g:gitgutter_realtime = 0
 
