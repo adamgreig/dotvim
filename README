@@ -5,5 +5,10 @@ Managed by Vundle, so install that on a new checkout:
     $ git submodule update --init
     $ vim +PluginInstall +qall
 
+The black plugin requires additional setup:
+
+    $ cd bundle/black
+    $ git checkout origin/stable -b stable
+
 If your vim doesn't check `~/.vim/vimrc`, symlink it:
     $ ln -s vimrc ~/.vimrc

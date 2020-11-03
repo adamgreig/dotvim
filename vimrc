@@ -17,16 +17,11 @@ call vundle#begin()
 
 " Utilities
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'sjl/gundo.vim'
 Plugin 'briandoll/change-inside-surroundings.vim'
-Plugin 'ervandew/supertab'
-"Plugin 'vim-scripts/swap-parameters'
-"Plugin 'scrooloose/syntastic'
-"Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 Plugin 'terryma/vim-expand-region'
 Plugin 'triglav/vim-visual-increment'
@@ -35,6 +30,8 @@ Plugin 'junegunn/fzf.vim', {'rtp': '~/.fzf'}
 Plugin 'dense-analysis/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'sjl/tslime.vim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 
 " Language/Syntax Support
 Plugin 'kchmck/vim-coffee-script'
@@ -49,7 +46,9 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'stephpy/vim-yaml'
 Plugin 'sirtaj/vim-openscad'
 Plugin 'fatih/vim-go'
-Plugin 'racer-rust/vim-racer'
+Plugin 'ARM9/arm-syntax-vim'
+Plugin 'ervandew/supertab'
+Plugin 'psf/black'
 
 " To consider:
 "Plugin 'scrooloose/nerdtree'
@@ -168,6 +167,7 @@ nmap <script> <silent> <unique> <Leader>ci :ChangeInsideSurrounding<CR>
 autocmd FileType make setlocal noexpandtab
 autocmd FileType ruby setlocal softtabstop=2 shiftwidth=2
 autocmd FileType html setlocal softtabstop=2 shiftwidth=2
+autocmd FileType htmldjango setlocal softtabstop=2 shiftwidth=2
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -181,6 +181,7 @@ autocmd BufNewFile,BufRead *.ebnf set filetype=ebnf
 autocmd BufNewFile,BufRead *.cl set filetype=opencl
 autocmd BufNewFile,BufRead *.sls set filetype=yaml
 autocmd BufNewFile,BufRead *.tex set tw=0
+autocmd BufNewFile,BufRead *.s,*.S set filetype=arm
 "augroup markdown
     "au!
     "au BufNewFile,BufRead *.md,*.markdown setlocal filetype=pandoc
@@ -188,11 +189,6 @@ autocmd BufNewFile,BufRead *.tex set tw=0
 hi link rustCommentLineDoc PreProc
 autocmd FileType rust syn keyword rustUnsafeKeyword unsafe
 autocmd FileType rust hi link rustUnsafeKeyword Special
-
-" supertab
-let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
-highlight Pmenu ctermbg=238 gui=bold
 
 " airline
 let g:airline_powerline_fonts = 1
@@ -205,27 +201,12 @@ let g:airline_detect_spelllang=0
 "let g:airline_inactive_collapse=1
 let g:airline_theme="bubblegum"
 
-" syntastic
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = "--max-complexity 11"
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-let g:syntastic_python_pylint_args = "-j8 -E"
-let g:syntastic_rust_checkers = []
-
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_enable_highlighting = 1
-let g:syntastic_enable_signs = 1
-
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_style_error_symbol = "😞"
-let g:syntastic_style_warning_symbol = "😕"
-
 " ALE
 let g:ale_sign_error = "✗"
 let g:ale_sign_warning = "⚠️"
+"let g:ale_linters = {
+"            \ 'rust': ['analyzer']
+"            \ }
 
 " gitgutter
 let g:gitgutter_realtime = 0
@@ -243,12 +224,6 @@ let g:tslime_vars_mapping = '<leader>T'
 let g:pandoc_use_hard_wraps = 1
 let g:pandoc#formatting#mode = 'ha'
 let g:vim_markdown_folding_disabled = 1
-
-" vim-racer
-set hidden
-let g:racer_cmd = "/home/adam/.cargo/bin/racer"
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
 
 " vim-easy-align
 xmap ga <Plug>(EasyAlign)
