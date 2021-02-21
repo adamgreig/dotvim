@@ -13,6 +13,7 @@ endif
 " load plugins via vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
 call vundle#begin()
 
 " Utilities
@@ -26,7 +27,8 @@ Plugin 'morhetz/gruvbox'
 Plugin 'terryma/vim-expand-region'
 Plugin 'triglav/vim-visual-increment'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'junegunn/fzf.vim', {'rtp': '~/.fzf'}
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'dense-analysis/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'sjl/tslime.vim'
@@ -156,8 +158,8 @@ vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 " fzf
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>e :Files<CR>
-nnoremap <leader>r :Tags<CR>
+nnoremap <leader>e :GFiles<CR>
+nnoremap <leader>r :Rg<CR>
 
 " Unmap nerdcommenter's comment-invert, map instead change-inside-surroundings
 nnoremap <leader>Ci <Plug>NERDCommenterInvert
@@ -204,9 +206,7 @@ let g:airline_theme="bubblegum"
 " ALE
 let g:ale_sign_error = "✗"
 let g:ale_sign_warning = "⚠️"
-"let g:ale_linters = {
-"            \ 'rust': ['analyzer']
-"            \ }
+let g:ale_linters = {'rust': ['analyzer'] }
 
 " Black
 let g:black_virtualenv = "~/.vim/tmp/black"
