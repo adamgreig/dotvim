@@ -34,6 +34,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'sjl/tslime.vim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
+"Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+"Plugin 'embear/vim-localvimrc'
 
 " Language/Syntax Support
 Plugin 'kchmck/vim-coffee-script'
@@ -47,10 +49,11 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'rust-lang/rust.vim'
 Plugin 'stephpy/vim-yaml'
 Plugin 'sirtaj/vim-openscad'
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 Plugin 'ARM9/arm-syntax-vim'
 Plugin 'ervandew/supertab'
 Plugin 'psf/black'
+Plugin 'cespare/vim-toml'
 
 " To consider:
 "Plugin 'scrooloose/nerdtree'
@@ -206,7 +209,12 @@ let g:airline_theme="bubblegum"
 " ALE
 let g:ale_sign_error = "✗"
 let g:ale_sign_warning = "⚠️"
-let g:ale_linters = {'rust': ['analyzer'] }
+let g:ale_linters = {'rust': ['analyzer'], 'cpp': ['cc'], 'c': ['cc'] }
+let g:ale_cpp_cc_options = '-std=c++14 -Wall -I/usr/local/share/yosys/include'
+"let g:ale_completion_enabled = 1
+let g:ale_rust_analyzer_config = {
+    \ 'checkOnSave':    { 'allTargets': v:false },
+\}
 
 " Black
 let g:black_virtualenv = "~/.vim/tmp/black"
