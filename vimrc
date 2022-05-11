@@ -164,6 +164,9 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>e :GFiles<CR>
 nnoremap <leader>r :Rg<CR>
 
+command Black !black %:p
+autocmd FileType python nnoremap <leader>f :Black<CR>
+
 " Unmap nerdcommenter's comment-invert, map instead change-inside-surroundings
 nnoremap <leader>Ci <Plug>NERDCommenterInvert
 nmap <script> <silent> <unique> <Leader>ci :ChangeInsideSurrounding<CR>
