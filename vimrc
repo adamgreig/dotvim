@@ -80,6 +80,8 @@ set directory=~/.vim/tmp
 set lazyredraw
 "set spell " (spelling off by default)
 set spelllang=en_gb
+" fix background rendering in kitty
+let &t_ut=''
 
 " folding
 set foldenable
@@ -96,7 +98,7 @@ set wildignore=*.pyc
 set title
 set showcmd
 set noshowmode
-set visualbell
+"set visualbell
 set ruler
 set cursorline
 set listchars=tab:›\ ,trail:·
