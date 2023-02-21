@@ -68,26 +68,24 @@
     url = https://github.com/psf/black
     shallow = true
 
-[submodule "pack/plugins/start/nvim-yarp"]
-    path = pack/plugins/start/nvim-yarp
-    url = https://github.com/roxma/nvim-yarp
-    shallow = true
-[submodule "pack/plugins/start/vim-hug-neovim-rpc"]
-    path = pack/plugins/start/vim-hug-neovim-rpc
-    url = https://github.com/roxma/vim-hug-neovim-rpc
-    shallow = true
+# rust syntax
 [submodule "pack/plugins/start/rust.vim"]
     path = pack/plugins/start/rust.vim
     url = https://github.com/rust-lang/rust.vim
     shallow = true
+
+# comment/uncomment with <leader>c<space>
 [submodule "pack/plugins/start/nerdcommenter"]
     path = pack/plugins/start/nerdcommenter
     url = https://github.com/scrooloose/nerdcommenter
     shallow = true
+
+# visualise undo tree with F5
 [submodule "pack/plugins/start/gundo.vim"]
     path = pack/plugins/start/gundo.vim
     url = https://github.com/sjl/gundo.vim
     shallow = true
+
 [submodule "pack/plugins/start/tslime.vim"]
     path = pack/plugins/start/tslime.vim
     url = https://github.com/sjl/tslime.vim

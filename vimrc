@@ -110,6 +110,7 @@ noremap : ;
 map q; ;q
 
 " plugin key bindings
+let g:gundo_prefer_python3=1
 nnoremap <F5> :GundoToggle<CR>
 "map <F2> :NERDTreeToggle<CR>
 "map <F3> :call FindInNERDTree()<CR>
