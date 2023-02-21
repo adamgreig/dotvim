@@ -1,35 +1,39 @@
+# syntax for armv4/5/6/7 assembly, used for .s/.S files by default
 [submodule "pack/plugins/start/arm-syntax-vim"]
     path = pack/plugins/start/arm-syntax-vim
     url = https://github.com/ARM9/arm-syntax-vim
     shallow = true
+
+# put git add/del/mod signs in the gutter column
 [submodule "pack/plugins/start/vim-gitgutter"]
     path = pack/plugins/start/vim-gitgutter
     url = https://github.com/airblade/vim-gitgutter
     shallow = true
+
+# <leader>ci to change inside brackets
 [submodule "pack/plugins/start/change-inside-surroundings.vim"]
     path = pack/plugins/start/change-inside-surroundings.vim
     url = https://github.com/briandoll/change-inside-surroundings.vim
     shallow = true
+
+# toml syntax, included in vim 8.2+ so get rid of this later
 [submodule "pack/plugins/start/vim-toml"]
     path = pack/plugins/start/vim-toml
     url = https://github.com/cespare/vim-toml
     shallow = true
+
+# linting
 [submodule "pack/plugins/start/ale"]
     path = pack/plugins/start/ale
     url = https://github.com/dense-analysis/ale
     shallow = true
+
+# tab completion
 [submodule "pack/plugins/start/supertab"]
     path = pack/plugins/start/supertab
     url = https://github.com/ervandew/supertab
     shallow = true
-[submodule "pack/plugins/start/tabular"]
-    path = pack/plugins/start/tabular
-    url = https://github.com/godlygeek/tabular
-    shallow = true
-[submodule "pack/plugins/start/vim-less"]
-    path = pack/plugins/start/vim-less
-    url = https://github.com/groenewege/vim-less
-    shallow = true
+
 [submodule "pack/plugins/start/fzf"]
     path = pack/plugins/start/fzf
     url = https://github.com/junegunn/fzf
