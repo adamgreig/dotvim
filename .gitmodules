@@ -34,6 +34,7 @@
     url = https://github.com/ervandew/supertab
     shallow = true
 
+# fuzzy file finding with <leader>b/e/r etc
 [submodule "pack/plugins/start/fzf"]
     path = pack/plugins/start/fzf
     url = https://github.com/junegunn/fzf
@@ -42,22 +43,31 @@
     path = pack/plugins/start/fzf.vim
     url = https://github.com/junegunn/fzf.vim
     shallow = true
+
+# alignment with ga
 [submodule "pack/plugins/start/vim-easy-align"]
     path = pack/plugins/start/vim-easy-align
     url = https://github.com/junegunn/vim-easy-align
     shallow = true
+
+# gruvbox theme
 [submodule "pack/plugins/start/gruvbox"]
     path = pack/plugins/start/gruvbox
     url = https://github.com/morhetz/gruvbox
     shallow = true
+
+# markdown syntax/mode
 [submodule "pack/plugins/start/vim-markdown"]
     path = pack/plugins/start/vim-markdown
-    url = https://github.com/plasticboy/vim-markdown
+    url = https://github.com/preservim/vim-markdown
     shallow = true
+
+# python code formatting
 [submodule "pack/plugins/start/black"]
     path = pack/plugins/start/black
     url = https://github.com/psf/black
     shallow = true
+
 [submodule "pack/plugins/start/nvim-yarp"]
     path = pack/plugins/start/nvim-yarp
     url = https://github.com/roxma/nvim-yarp
