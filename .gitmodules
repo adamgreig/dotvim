@@ -86,10 +86,6 @@
     url = https://github.com/sjl/gundo.vim
     shallow = true
 
-[submodule "pack/plugins/start/vim-yaml"]
-    path = pack/plugins/start/vim-yaml
-    url = https://github.com/stephpy/vim-yaml
-    shallow = true
 [submodule "pack/plugins/start/vim-expand-region"]
     path = pack/plugins/start/vim-expand-region
     url = https://github.com/terryma/vim-expand-region
