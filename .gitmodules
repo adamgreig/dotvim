@@ -1,3 +1,100 @@
-[submodule "bundle/Vundle.vim"]
-	path = bundle/Vundle.vim
-	url = https://github.com/gmarik/Vundle.vim.git
+[submodule "pack/plugins/start/arm-syntax-vim"]
+    path = pack/plugins/start/arm-syntax-vim
+    url = https://github.com/ARM9/arm-syntax-vim
+    shallow = true
+[submodule "pack/plugins/start/vim-gitgutter"]
+    path = pack/plugins/start/vim-gitgutter
+    url = https://github.com/airblade/vim-gitgutter
+    shallow = true
+[submodule "pack/plugins/start/change-inside-surroundings.vim"]
+    path = pack/plugins/start/change-inside-surroundings.vim
+    url = https://github.com/briandoll/change-inside-surroundings.vim
+    shallow = true
+[submodule "pack/plugins/start/vim-toml"]
+    path = pack/plugins/start/vim-toml
+    url = https://github.com/cespare/vim-toml
+    shallow = true
+[submodule "pack/plugins/start/ale"]
+    path = pack/plugins/start/ale
+    url = https://github.com/dense-analysis/ale
+    shallow = true
+[submodule "pack/plugins/start/supertab"]
+    path = pack/plugins/start/supertab
+    url = https://github.com/ervandew/supertab
+    shallow = true
+[submodule "pack/plugins/start/tabular"]
+    path = pack/plugins/start/tabular
+    url = https://github.com/godlygeek/tabular
+    shallow = true
+[submodule "pack/plugins/start/vim-less"]
+    path = pack/plugins/start/vim-less
+    url = https://github.com/groenewege/vim-less
+    shallow = true
+[submodule "pack/plugins/start/fzf"]
+    path = pack/plugins/start/fzf
+    url = https://github.com/junegunn/fzf
+    shallow = true
+[submodule "pack/plugins/start/fzf.vim"]
+    path = pack/plugins/start/fzf.vim
+    url = https://github.com/junegunn/fzf.vim
+    shallow = true
+[submodule "pack/plugins/start/vim-easy-align"]
+    path = pack/plugins/start/vim-easy-align
+    url = https://github.com/junegunn/vim-easy-align
+    shallow = true
+[submodule "pack/plugins/start/gruvbox"]
+    path = pack/plugins/start/gruvbox
+    url = https://github.com/morhetz/gruvbox
+    shallow = true
+[submodule "pack/plugins/start/vim-markdown"]
+    path = pack/plugins/start/vim-markdown
+    url = https://github.com/plasticboy/vim-markdown
+    shallow = true
+[submodule "pack/plugins/start/black"]
+    path = pack/plugins/start/black
+    url = https://github.com/psf/black
+    shallow = true
+[submodule "pack/plugins/start/nvim-yarp"]
+    path = pack/plugins/start/nvim-yarp
+    url = https://github.com/roxma/nvim-yarp
+    shallow = true
+[submodule "pack/plugins/start/vim-hug-neovim-rpc"]
+    path = pack/plugins/start/vim-hug-neovim-rpc
+    url = https://github.com/roxma/vim-hug-neovim-rpc
+    shallow = true
+[submodule "pack/plugins/start/rust.vim"]
+    path = pack/plugins/start/rust.vim
+    url = https://github.com/rust-lang/rust.vim
+    shallow = true
+[submodule "pack/plugins/start/nerdcommenter"]
+    path = pack/plugins/start/nerdcommenter
+    url = https://github.com/scrooloose/nerdcommenter
+    shallow = true
+[submodule "pack/plugins/start/gundo.vim"]
+    path = pack/plugins/start/gundo.vim
+    url = https://github.com/sjl/gundo.vim
+    shallow = true
+[submodule "pack/plugins/start/tslime.vim"]
+    path = pack/plugins/start/tslime.vim
+    url = https://github.com/sjl/tslime.vim
+    shallow = true
+[submodule "pack/plugins/start/vim-yaml"]
+    path = pack/plugins/start/vim-yaml
+    url = https://github.com/stephpy/vim-yaml
+    shallow = true
+[submodule "pack/plugins/start/vim-expand-region"]
+    path = pack/plugins/start/vim-expand-region
+    url = https://github.com/terryma/vim-expand-region
+    shallow = true
+[submodule "pack/plugins/start/vim-visual-increment"]
+    path = pack/plugins/start/vim-visual-increment
+    url = https://github.com/triglav/vim-visual-increment
+    shallow = true
+[submodule "pack/plugins/start/vim-airline"]
+    path = pack/plugins/start/vim-airline
+    url = https://github.com/vim-airline/vim-airline
+    shallow = true
+[submodule "pack/plugins/start/vim-airline-themes"]
+    path = pack/plugins/start/vim-airline-themes
+    url = https://github.com/vim-airline/vim-airline-themes
+    shallow = true

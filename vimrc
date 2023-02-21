@@ -11,54 +11,8 @@ if $SHELL =~ "fish"
 endif
 
 " load plugins via vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
-call vundle#begin()
 
-" Utilities
-Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'sjl/gundo.vim'
-Plugin 'briandoll/change-inside-surroundings.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'terryma/vim-expand-region'
-Plugin 'triglav/vim-visual-increment'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'dense-analysis/ale'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'sjl/tslime.vim'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-"Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-"Plugin 'embear/vim-localvimrc'
-
-" Language/Syntax Support
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'groenewege/vim-less'
-Plugin 'vim-scripts/opencl.vim'
-Plugin 'petRUShka/vim-pyopencl'
-"Plugin 'vim-pandoc/vim-pandoc-syntax'
-"Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'rust-lang/rust.vim'
-Plugin 'stephpy/vim-yaml'
-Plugin 'sirtaj/vim-openscad'
-"Plugin 'fatih/vim-go'
-Plugin 'ARM9/arm-syntax-vim'
-Plugin 'ervandew/supertab'
-Plugin 'psf/black'
-Plugin 'cespare/vim-toml'
-
-" To consider:
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'jamessan/vim-gnupg'
-call vundle#end()
 filetype plugin indent on
 
 " tabs and indentation
