@@ -86,14 +86,19 @@
     url = https://github.com/sjl/gundo.vim
     shallow = true
 
+# expand/shrink selection with v/c-v
 [submodule "pack/plugins/start/vim-expand-region"]
     path = pack/plugins/start/vim-expand-region
     url = https://github.com/terryma/vim-expand-region
     shallow = true
+
+# increment/decrement over multiple lines
 [submodule "pack/plugins/start/vim-visual-increment"]
     path = pack/plugins/start/vim-visual-increment
     url = https://github.com/triglav/vim-visual-increment
     shallow = true
+
+# status line
 [submodule "pack/plugins/start/vim-airline"]
     path = pack/plugins/start/vim-airline
     url = https://github.com/vim-airline/vim-airline
