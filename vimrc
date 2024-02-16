@@ -169,9 +169,11 @@ let g:airline_theme="bubblegum"
 " ALE
 let g:ale_sign_error = "✗"
 let g:ale_sign_warning = "⚠️"
-let g:ale_linters = {'rust': ['analyzer'], 'cpp': ['cc'], 'c': ['cc'], 'python': ['flake8'] }
+let g:ale_linters = {'rust': ['analyzer'], 'cpp': ['cc'], 'c': ['cc'], 'python': ['ruff'] }
+let g:ale_fixers = {'python': ["ruff"] }
 let g:ale_cpp_cc_options = '-std=c++14 -Wall -I/usr/local/share/yosys/include'
 let g:ale_c_cc_options = '-std=c99 -Wall -I/home/adam/opt/ti/ccs1120/ccs/ccs_base/msp430/include_gcc'
+"let g:ale_python_flake8_options = '--ignore=F405 --max-line-length=88'
 "let g:ale_completion_enabled = 1
 let g:ale_rust_analyzer_config = {
     \ 'checkOnSave':    { 'allTargets': v:false },
