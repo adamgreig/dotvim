@@ -107,3 +107,6 @@
     path = pack/plugins/start/vim-airline-themes
     url = https://github.com/vim-airline/vim-airline-themes
     shallow = true
+[submodule "pack/plugins/start/typst"]
+	path = pack/plugins/start/typst
+	url = https://github.com/kaarmu/typst.vim
