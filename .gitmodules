@@ -110,3 +110,6 @@
 [submodule "pack/plugins/start/typst"]
 	path = pack/plugins/start/typst
 	url = https://github.com/kaarmu/typst.vim
+[submodule "pack/plugins/start/vim-just"]
+	path = pack/plugins/start/vim-just
+	url = https://github.com/NoahTheDuke/vim-just.git
